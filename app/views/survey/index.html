@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/url/of/previous/page">Back</a>
+
+      <h1 class="heading-large">
+        Survey pages
+      </h1>
+
+      <h2 class="heading-medium">Question pages</h2>
+      <ul class="list-bullet">
+        <li><a href="survey/about-your-service">About your service</a></li>
+        <li><a href="survey/building-a-new-service">Building a new service</a></li>
+        <li><a href="survey/using-paas-for">Using PaaS for</a></li>
+      </ul>
+
+      <h2 class="heading-medium">Other pages</h2>
+      <ul class="list-bullet">
+        <li><a href="survey/check-your-answers">Check your answers</a></li>
+      </ul>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
