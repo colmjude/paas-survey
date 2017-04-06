@@ -20,16 +20,16 @@
           <legend class="visuallyhidden">What will you be using PaaS for?</legend>
 
           <div class="multiple-choice">
-            <input id="radio-1" type="radio" name="purpose-q" value="prototyping">
+            <input id="radio-1" type="radio" name="purpose-q" value="prototyping" {{ checked( "purpose-q", "prototyping" ) }}>
             <label for="radio-1">Prototyping</label>
           </div>
           <div class="multiple-choice">
-            <input id="radio-2" type="radio" name="purpose-q" value="hosting a service">
+            <input id="radio-2" type="radio" name="purpose-q" value="hosting a service" {{ checked( "purpose-q", "hosting a service" ) }}>
             <label for="radio-2">Hosting a service</label>
           </div>
           <p class="form-block">or</p>
           <div class="multiple-choice">
-            <input id="radio-3" type="radio" name="purpose-q" value="other">
+            <input id="radio-3" type="radio" name="purpose-q" value="other" {{ checked( "purpose-q", "other" ) }}>
             <label for="radio-3">Other</label>
           </div>
 

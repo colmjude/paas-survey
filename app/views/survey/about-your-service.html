@@ -23,15 +23,15 @@
             </span>
           </legend>
           <div class="multiple-choice">
-            <input id="radio-inline-1a" type="radio" name="service-status" value="alpha">
+            <input id="radio-inline-1a" type="radio" name="service-status" value="alpha" {{ checked( "service-status", "alpha" ) }}>
             <label for="radio-inline-1a">alpha</label>
           </div>
           <div class="multiple-choice">
-            <input id="radio-inline-2a" type="radio" name="service-status" value="beta">
+            <input id="radio-inline-2a" type="radio" name="service-status" value="beta" {{ checked( "service-status", "beta" ) }}>
             <label for="radio-inline-2a">beta</label>
           </div>
           <div class="multiple-choice">
-            <input id="radio-inline-2a" type="radio" name="service-status" value="live">
+            <input id="radio-inline-2a" type="radio" name="service-status" value="live" {{ checked( "service-status", "live" ) }}>
             <label for="radio-inline-2a">live</label>
           </div>
         </fieldset>
@@ -44,16 +44,16 @@
           </legend>
 
           <div class="multiple-choice">
-            <input id="radio-1" type="radio" name="who-for" value="public">
+            <input id="radio-1" type="radio" name="who-for" value="public" {{ checked( "who-for", "public" ) }}>
             <label for="radio-1">The public</label>
           </div>
           <div class="multiple-choice">
-            <input id="radio-2" type="radio" name="who-for" value="internal - all">
+            <input id="radio-2" type="radio" name="who-for" value="internal - all" {{ checked( "who-for", "internal - all" ) }}>
             <label for="radio-2">All internal staff</label>
           </div>
           <p class="form-block">or</p>
           <div class="multiple-choice">
-            <input id="radio-3" type="radio" name="who-for" value="internal - limited">
+            <input id="radio-3" type="radio" name="who-for" value="internal - limited" {{ checked( "who-for", "internal - limited" ) }}>
             <label for="radio-3">Selected internal staff</label>
           </div>
 

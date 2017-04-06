@@ -25,15 +25,15 @@
             </span>
           </legend>
           <div class="multiple-choice">
-            <input id="radio-inline-1a" type="radio" name="postgres-needed" value="need">
+            <input id="radio-inline-1a" type="radio" name="postgres-needed" value="need" {{ checked( "postgres-needed", "need" ) }}>
             <label for="radio-inline-1a">Need</label>
           </div>
           <div class="multiple-choice">
-            <input id="radio-inline-2a" type="radio" name="postgres-needed" value="not needed">
+            <input id="radio-inline-2a" type="radio" name="postgres-needed" value="not needed" {{ checked( "postgres-needed", "not needed" ) }}>
             <label for="radio-inline-2a">Don't need</label>
           </div>
           <div class="multiple-choice">
-            <input id="radio-inline-2a" type="radio" name="postgres-needed" value="unsure">
+            <input id="radio-inline-2a" type="radio" name="postgres-needed" value="unsure" {{ checked( "postgres-needed", "unsure" ) }}>
             <label for="radio-inline-2a">Not sure yet</label>
           </div>
         </fieldset>

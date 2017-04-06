@@ -20,16 +20,16 @@
           <legend class="visuallyhidden">Are you building a new service?</legend>
 
           <div class="multiple-choice">
-            <input id="radio-1" type="radio" name="building-new-service" value="yes">
+            <input id="radio-1" type="radio" name="building-new-service" value="yes" {{ checked( "building-new-service", "yes" ) }}>
             <label for="radio-1">Yes</label>
           </div>
           <div class="multiple-choice">
-            <input id="radio-2" type="radio" name="building-new-service" value="no">
+            <input id="radio-2" type="radio" name="building-new-service" value="no" {{ checked( "building-new-service", "no" ) }}>
             <label for="radio-2">No - we are looking to move an existing service on to the PaaS</label>
           </div>
           <p class="form-block">or</p>
           <div class="multiple-choice">
-            <input id="radio-3" type="radio" name="building-new-service" value="other">
+            <input id="radio-3" type="radio" name="building-new-service" value="other" {{ checked( "building-new-service", "other" ) }}>
             <label for="radio-3">Don't know</label>
           </div>
 
