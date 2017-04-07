@@ -11,11 +11,13 @@ router.get('/', function (req, res) {
 // Purpose for using PaaS
 router.get('/survey/building-a-new-service', function (req, res) {
   // get the answer from the query string (eg. ?over18=false)
-  var purpose = req.query['purpose-q']
+  var purpose = req.session.data['purpose-q']
 
   if (purpose === 'hosting a service') {
     // redirect to the relevant page
     res.render('survey/building-a-new-service')
+  } else if (purpose === "just trying it out") {
+    res.redirect('/survey/just-trying-it')
   } else {
     // if over18 is any other value (or is missing) render the page requested
     res.redirect('/survey/additional-prototype-features')
