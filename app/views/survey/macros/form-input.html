@@ -1,0 +1,29 @@
+<!-- 
+     need to pass macro the data object
+     because context variables are accessible
+     in the rendering template only
+     as discussed: https://github.com/mozilla/nunjucks/issues/525
+-->
+{% macro textField(name, label, data) %}
+  {% set value = data[name] %}
+  <label class="form-label" for="{{ name }}">{{ label }}</label>
+  <input class="form-control" id="{{ name }}" name="{{ name }}" type="text" value="{{ data[name] }}">
+{% endmacro %}
+
+{% macro radioField(name, label, id, value=label, data) %}
+  <div class="multiple-choice">
+    <input id="radio-{{id}}" type="radio" name="{{ name }}" value="{{ value }}" {{ checked( name, value ) }}>
+    <label for="radio-{{id}}">{{ label }}</label>
+  </div>
+{% endmacro %}
+<!--
+Examples
+<label class="form-label" for="telephone-number">Enter your telephone number</label>
+<input class="form-control" id="telephone-number" name="telephone-number" type="text">
+
+<input id="radio-1" type="radio" name="who-for" value="public" {{ checked( "who-for", "public" ) }}>
+<label for="radio-1">The public</label>
+
+<input id="waste-type-1" name="waste-types" type="checkbox" value="waste-animal">
+<label for="waste-type-1">Waste from animal carcasses</label>
+-->
