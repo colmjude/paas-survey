@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/url/of/previous/page">Back</a>
+
+      <h1 class="heading-large">Will you need any other backing services?</h1>
+
+      <form class="form" action="/survey/preferable-features" method="post">
+
+        <fieldset class="form-group inline">
+          <legend>
+            <span class="form-label-bold">
+              Elasticsearch
+            </span>
+          </legend>
+          {{ form.radioField("elasticsearch-need", "Yes", 1, data) }}
+          {{ form.radioField("elasticsearch-need", "No", 2, data) }}
+          {{ form.radioField("elasticsearch-need", "Maybe at some point", 3, data) }}
+        </fieldset>
+
+        <fieldset class="form-group inline">
+          <legend>
+            <span class="form-label-bold">
+              Elasticsearch for logging
+            </span>
+          </legend>
+          {{ form.radioField("elasticsearch-logging-need", "Yes", "esl1", data) }}
+          {{ form.radioField("elasticsearch-logging-need", "No", "esl2", data) }}
+          {{ form.radioField("elasticsearch-logging-need", "Maybe at some point", "esl3", data) }}
+        </fieldset>
+
+        <fieldset class="form-group inline">
+          <legend>
+            <span class="form-label-bold">
+              Memcache
+            </span>
+          </legend>
+          {{ form.radioField("memcache-need", "Yes", "mem1", data) }}
+          {{ form.radioField("memcache-need", "No", "mem2", data) }}
+          {{ form.radioField("memcache-need", "Maybe at some point", "mem3", data) }}
+        </fieldset>
+
+        <fieldset class="form-group inline">
+          <legend>
+            <span class="form-label-bold">
+              RabbitMQ
+            </span>
+          </legend>
+          {{ form.radioField("rabbitmq-need", "Yes", "rmq1", data) }}
+          {{ form.radioField("rabbitmq-need", "No", "rmq2", data) }}
+          {{ form.radioField("rabbitmq-need", "Maybe at some point", "rmq3", data) }}
+        </fieldset>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
