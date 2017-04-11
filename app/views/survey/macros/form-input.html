@@ -16,6 +16,13 @@
     <label for="radio-{{id}}">{{ label }}</label>
   </div>
 {% endmacro %}
+
+{% macro checkboxField(name, label, id, value=label, data) %}
+<div class="multiple-choice">
+  <input id="waste-{{id}}" name="{{ name }}" type="checkbox" value="{{ value }}" {{ checked( name, value) }}>
+  <label for="waste-{{id}}">{{ label }}</label>
+</div>
+{% endmacro %}
 <!--
 Examples
 <label class="form-label" for="telephone-number">Enter your telephone number</label>
