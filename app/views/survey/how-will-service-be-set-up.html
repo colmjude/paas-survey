@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/url/of/previous/page">Back</a>
+
+      <h1 class="heading-large">How will your service work?</h1>
+
+      <form class="form" action="/survey/storage-requirements" method="post">
+
+        <fieldset class="form-group">
+          <legend>
+            <span class="form-label-bold">
+              What programming languages are used?
+            </span>
+          </legend>
+
+          {{ form.checkboxField("language-choices", "Java", "java", value="java", data) }}
+          {{ form.checkboxField("language-choices", "Python", "py", value="python", data) }}
+          {{ form.checkboxField("language-choices", "NodeJS", "node", value="node", data) }}
+          {{ form.checkboxField("language-choices", "Scala", "scala", value="scala", data) }}
+          {{ form.checkboxField("language-choices", "Ruby", "ruby", value="ruby", data) }}
+          <div class="multiple-choice" data-target="language-choices-other-field">
+            <input id="checkbox-lc-other" type="checkbox" name="language-choices" value="other">
+            <label for="checkbox-lc-other">Other</label>
+          </div>
+          <div class="panel panel-border-narrow js-hidden" id="language-choices-other-field">
+            <label class="form-label" for="other-technologies-text">Other technologies
+              <span class="form-hint">Separate items by a comma</span>
+            </label>
+            <input class="form-control" name="language-choices-other" type="text" id="other-technologies-text">
+          </div>
+
+        </fieldset>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
