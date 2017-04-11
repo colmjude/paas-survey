@@ -17,7 +17,7 @@
       <form class="form" action="/survey/storage-requirements" method="post">
 
         <fieldset class="form-group">
-          <legend>
+          <legend class="form-label-multiple-choice">
             <span class="form-label-bold">
               What programming languages are used?
             </span>
@@ -40,6 +40,29 @@
           </div>
 
         </fieldset>
+
+        <fieldset class="form-group">
+          <legend class="form-label-multiple-choice">
+            <span class="form-label-bold">
+              What are your plans for CI?
+            </span>
+          </legend>
+          {{ form.radioField("ci-plans", "Whatever platform provides", "plat-prov", data) }}
+          <div class="multiple-choice" data-target="tech-in-mind-field">
+            <input id="radio-tech-in-mind" type="radio" name="ci-plans" value="Technologies in mind">
+            <label for="radio-tech-in-mind">We have technologies in mind</label>
+          </div>
+          <div class="panel panel-border-narrow js-hidden" id="tech-in-mind-field">
+            {{ form.radioField("ci-tech-in-mind", "Jenkins", "tech-in-mind-jenkins", data) }}
+            {{ form.radioField("ci-tech-in-mind", "Travis", "tech-in-mind-travis", data) }}
+            {{ form.radioField("ci-tech-in-mind", "Circle CI", "tech-in-mind-circle", data) }}
+            {{ form.radioField("ci-tech-in-mind", "Other", "tech-in-mind-other", data) }}
+          </div>
+        </fieldset>
+
+        <div class="form-group">
+          {{ form.textField("logging-solution", "What logging solution do you have in mind?", data, _class="form-label-bold form-label-bm") }}
+        </div>
 
         <div class="form-group">
           <input class="button" type="submit" value="Continue">
