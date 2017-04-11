@@ -10,15 +10,38 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <a class="link-back" href="/url/of/previous/page">Back</a>
+      <a class="link-back" href="/survey/using-paas-for">Back</a>
 
       <h1 class="heading-large">Will your prototype need these hosting features?</h1>
 
-      <form class="form" action="/url/of/next/page" method="post">
+      <form class="form" action="/survey/check-your-answers" method="post">
 
-        <p>[Insert question content here]</p>
+        <fieldset class="form-group">
+          <legend class="form-label-bm">
+            <span class="form-label-bold">
+              What are you using to build your prototype?
+            </span>
+          </legend>
+          {{ form.radioField("prototype-kit-choice", "GOVUK Prototyping kit", "govuk", data) }}
+          <div class="multiple-choice" data-target="prototype-kit-choice-other-field">
+            <input id="radio-pkc-other" type="radio" name="prototype-kit-choice" value="other">
+            <label for="radio-pkc-other">Other</label>
+          </div>
+          <div class="panel panel-border-narrow js-hidden" id="prototype-kit-choice-other-field">
+            <label class="form-label" for="other-proto-kit-text"></label>
+            <input class="form-control" name="other-proto-kit" type="text" id="other-proto-kit-text">
+          </div>
+        </fieldset>
 
-        <p>[See <a href="https://govuk-elements.herokuapp.com/form-elements/">GOV.UK Elements</a> for examples]</p>
+        <fieldset class="form-group">
+          <legend class="form-label-bm">
+            <span class="form-label-bold">
+              Do you need to use a database?
+            </span>
+          </legend>
+          {{ form.radioField("prototype-db-need", "Yes", "db-yes", data) }}
+          {{ form.radioField("prototype-db-need", "No", "db-no", data) }}
+        </fieldset>
 
         <div class="form-group">
           <input class="button" type="submit" value="Continue">
