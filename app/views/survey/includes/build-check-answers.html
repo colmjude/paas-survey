@@ -1,0 +1,145 @@
+<table class="check-your-answers">
+
+  <thead>
+    <tr>
+      <th colspan="2">
+        <h2 class="heading-medium">
+          About your service
+        </h2>
+      </th>
+      <th>
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Stage
+      </td>
+      <td>
+        {{ data['service-status'] }}
+      </td>
+      <td class="change-answer">
+        <a href="#">
+          Change <span class="visuallyhidden">service statue</span>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Target audience
+      </td>
+      <td>
+        {{ data['who-for'] }}
+      </td>
+      <td class="change-answer">
+        <a href="#">
+          Change <span class="visuallyhidden">who service is for</span>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="check-your-answers">
+
+  <thead>
+    <tr>
+      <th colspan="2">
+        <h2 class="heading-medium">
+          Your service hosting requirements
+        </h2>
+      </th>
+      <th>
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Postgres
+      </td>
+      <td>
+        {{ data['postgres-needed'] }}
+      </td>
+      <td class="change-answer">
+        <a href="#">
+          Change <span class="visuallyhidden">service statue</span>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        MySQL
+      </td>
+      <td>
+        {{ data['mysql-needed'] }}
+      </td>
+      <td class="change-answer">
+        <a href="#">
+          Change <span class="visuallyhidden">who service is for</span>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Redis
+      </td>
+      <td>
+        {{ data['redis-needed'] }}
+      </td>
+      <td class="change-answer">
+        <a href="#">
+          Change <span class="visuallyhidden">who service is for</span>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        MongoDB
+      </td>
+      <td>
+        {{ data['mongodb-needed'] }}
+      </td>
+      <td class="change-answer">
+        <a href="#">
+          Change <span class="visuallyhidden">who service is for</span>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="check-your-answers">
+
+  <thead>
+    <tr>
+      <th colspan="2">
+        <h2 class="heading-medium">
+          Best person to contact
+        </h2>
+      </th>
+      <th>
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Who
+      </td>
+      <td>
+        {{ data['contact-name'] }}
+        {{ data['language-choices'] }}
+      </td>
+      <td class="change-answer">
+        <a href="/survey/who-should-we-contact">
+          Change <span class="visuallyhidden">service statue</span>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
