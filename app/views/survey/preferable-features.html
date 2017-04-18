@@ -12,39 +12,11 @@
 
       <a class="link-back" href="/url/of/previous/page">Back</a>
 
-      <h1 class="heading-large">What features do you expect from a hosting platform?</h1>
+      <h1 class="heading-large">
+        <span class="heading-secondary">PaaS features</span>
+        What features do you expect from a hosting platform?</h1>
 
       <form class="form" action="/survey/who-should-we-contact" method="post">
-
-        <fieldset class="form-group">
-          <legend>
-            <span class="heading-medium">
-              Docker
-            </span>
-          </legend>
-          <p>We have recently added docker support to the PaaS but it would be useful for us to know what kind of docker support services need.</p>
-
-          <div class="form-group inline">
-            <p class="form-label-bold">Docker - public images</p>
-            {{ form.radioField("docker-pub-need", "Yes", "dpub1", data) }}
-            {{ form.radioField("docker-pub-need", "No", "dpub2", data) }}
-            {{ form.radioField("docker-pub-need", "Maybe at some point", "dpub3", data) }}
-          </div>
-
-          <div class="form-group inline">
-            <p class="form-label-bold">Docker - private images</p>
-            {{ form.radioField("docker-priv-need", "Yes", "dpriv1", data) }}
-            {{ form.radioField("docker-priv-need", "No", "dpriv2", data) }}
-            {{ form.radioField("docker-priv-need", "Maybe at some point", "dpriv3", data) }}
-          </div>
-
-          <div class="form-group inline">
-            <p class="form-label-bold">Docker - building images</p>
-            {{ form.radioField("docker-build-need", "Yes", "dbuild1", data) }}
-            {{ form.radioField("docker-build-need", "No", "dbuild2", data) }}
-            {{ form.radioField("docker-build-need", "Maybe at some point", "dbuild3", data) }}
-          </div>
-        </fieldset>
 
         <fieldset class="form-group inline">
           <legend>
@@ -100,6 +72,36 @@
           {{ form.radioField("secrets-management-need", "Yes", "sec1", data) }}
           {{ form.radioField("secrets-management-need", "No", "sec2", data) }}
           {{ form.radioField("secrets-management-need", "Maybe at some point", "sec3", data) }}
+        </fieldset>
+
+        <fieldset class="form-group">
+          <legend>
+            <span class="heading-medium">
+              Docker
+            </span>
+          </legend>
+          <p>We have recently added docker support to the PaaS but it would be useful for us to know what kind of docker support services need.</p>
+
+          <div class="form-group inline">
+            <p class="form-label-bold">Docker - public images</p>
+            {{ form.radioField("docker-pub-need", "Yes", "dpub1", data) }}
+            {{ form.radioField("docker-pub-need", "No", "dpub2", data) }}
+            {{ form.radioField("docker-pub-need", "Maybe at some point", "dpub3", data) }}
+          </div>
+
+          <div class="form-group inline">
+            <p class="form-label-bold">Docker - private images</p>
+            {{ form.radioField("docker-priv-need", "Yes", "dpriv1", data) }}
+            {{ form.radioField("docker-priv-need", "No", "dpriv2", data) }}
+            {{ form.radioField("docker-priv-need", "Maybe at some point", "dpriv3", data) }}
+          </div>
+
+          <div class="form-group inline">
+            <p class="form-label-bold">Docker - building images</p>
+            {{ form.radioField("docker-build-need", "Yes", "dbuild1", data) }}
+            {{ form.radioField("docker-build-need", "No", "dbuild2", data) }}
+            {{ form.radioField("docker-build-need", "Maybe at some point", "dbuild3", data) }}
+          </div>
         </fieldset>
 
         <div class="form-group">
