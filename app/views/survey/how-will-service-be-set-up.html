@@ -12,7 +12,9 @@
 
       <a class="link-back" href="/url/of/previous/page">Back</a>
 
-      <h1 class="heading-large">How will your service work?</h1>
+      <h1 class="heading-large">
+        <span class="heading-secondary">About your service</span>
+        How will your service work?</h1>
 
       <form class="form" action="/survey/storage-requirements" method="post">
 
@@ -49,7 +51,7 @@
           </legend>
           {{ form.radioField("ci-plans", "Whatever platform provides", "plat-prov", data) }}
           <div class="multiple-choice" data-target="tech-in-mind-field">
-            <input id="radio-tech-in-mind" type="radio" name="ci-plans" value="Technologies in mind">
+            <input id="radio-tech-in-mind" type="radio" name="ci-plans" value="other">
             <label for="radio-tech-in-mind">We have technologies in mind</label>
           </div>
           <div class="panel panel-border-narrow js-hidden" id="tech-in-mind-field">
