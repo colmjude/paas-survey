@@ -15,6 +15,20 @@
   <tbody>
     <tr>
       <td>
+        Building a new service
+      </td>
+      <td>
+        {{ data['building-new-service'] }}
+      </td>
+      <td class="change-answer">
+        <a href="/survey/building-a-new-service">
+          Change <span class="visuallyhidden">building a new service answer</span>
+        </a>
+      </td>
+    </tr>
+    {% if data['building-new-service'] == "no" %}
+    <tr>
+      <td>
         Stage
       </td>
       <td>
@@ -26,6 +40,7 @@
         </a>
       </td>
     </tr>
+    {% endif %}
     <tr>
       <td>
         Target audience
@@ -48,7 +63,68 @@
     <tr>
       <th colspan="2">
         <h2 class="heading-medium">
-          Your service hosting requirements
+          How you will build your service
+        </h2>
+      </th>
+      <th>
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Languages used
+      </td>
+      <td>
+        {{ data['language-choices'] }}, {{ data['language-choices-other'] }}
+
+      </td>
+      <td class="change-answer">
+        <a href="/survey/building-a-new-service">
+          Change <span class="visuallyhidden">building a new service answer</span>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Continuous integration plans
+      </td>
+      <td>
+        {% if data['ci-plans'] == "other" %} 
+        {{ data['ci-tech-in-mind'] }}
+        {% else %}
+        {{ data['ci-plans'] }}
+        {% endif %}
+      </td>
+      <td class="change-answer">
+        <a href="#">
+          Change <span class="visuallyhidden">service statue</span>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Logging solution
+      </td>
+      <td>
+        {{ data['logging-solution'] }}
+      </td>
+      <td class="change-answer">
+        <a href="#">
+          Change <span class="visuallyhidden">who service is for</span>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="check-your-answers">
+  <thead>
+    <tr>
+      <th colspan="2">
+        <h2 class="heading-medium">
+          Your storage requirements
         </h2>
       </th>
       <th>
@@ -113,6 +189,196 @@
 </table>
 
 <table class="check-your-answers">
+  <thead>
+    <tr>
+      <th colspan="2">
+        <h2 class="heading-medium">
+          Your backing service needs
+        </h2>
+      </th>
+      <th>
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Elasticsearch
+      </td>
+      <td>
+        {{ data['elasticsearch-need'] }}
+      </td>
+      <td class="change-answer">
+        <a href="#">
+          Change <span class="visuallyhidden">service statue</span>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Elasticsearch for logging
+      </td>
+      <td>
+        {{ data['elasticsearch-logging-need'] }}
+      </td>
+      <td class="change-answer">
+        <a href="#">
+          Change <span class="visuallyhidden">who service is for</span>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Memcache
+      </td>
+      <td>
+        {{ data['memcache-need'] }}
+      </td>
+      <td class="change-answer">
+        <a href="#">
+          Change <span class="visuallyhidden">who service is for</span>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        RabbitMQ
+      </td>
+      <td>
+        {{ data['rabbitmq-need'] }}
+      </td>
+      <td class="change-answer">
+        <a href="#">
+          Change <span class="visuallyhidden">who service is for</span>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="check-your-answers">
+  <thead>
+    <tr>
+      <th colspan="2">
+        <h2 class="heading-medium">
+          Hosting features
+        </h2>
+      </th>
+      <th>
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Autoscaling
+      </td>
+      <td>
+        {{ data['autoscale-need'] }}
+      </td>
+      <td class="change-answer">
+        <a href="#">
+          Change <span class="visuallyhidden">service statue</span>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Isolated applications
+      </td>
+      <td>
+        {{ data['isolated-need'] }}
+      </td>
+      <td class="change-answer">
+        <a href="#">
+          Change <span class="visuallyhidden">who service is for</span>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Scheduled jobs
+      </td>
+      <td>
+        {{ data['scheduled-job-need'] }}
+      </td>
+      <td class="change-answer">
+        <a href="#">
+          Change <span class="visuallyhidden">who service is for</span>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Anti-virus
+      </td>
+      <td>
+        {{ data['antivirus-need'] }}
+      </td>
+      <td class="change-answer">
+        <a href="#">
+          Change <span class="visuallyhidden">who service is for</span>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Secrets management
+      </td>
+      <td>
+        {{ data['secrets-management-need'] }}
+      </td>
+      <td class="change-answer">
+        <a href="#">
+          Change <span class="visuallyhidden">who service is for</span>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Docker: Public
+      </td>
+      <td>
+        {{ data['docker-pub-need'] }}
+      </td>
+      <td class="change-answer">
+        <a href="#">
+          Change <span class="visuallyhidden">who service is for</span>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Docker: Private
+      </td>
+      <td>
+        {{ data['docker-priv-need'] }}
+      </td>
+      <td class="change-answer">
+        <a href="#">
+          Change <span class="visuallyhidden">who service is for</span>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Docker: Build
+      </td>
+      <td>
+        {{ data['docker-build-need'] }}
+      </td>
+      <td class="change-answer">
+        <a href="#">
+          Change <span class="visuallyhidden">who service is for</span>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="check-your-answers">
 
   <thead>
     <tr>
@@ -132,8 +398,12 @@
         Who
       </td>
       <td>
-        {{ data['contact-name'] }}
-        {{ data['language-choices'] }}
+        {% if data['person-to-contact'] == "you" %}
+        You
+        {% else %}
+        Name: {{ data['person-to-contact-name'] }}<br />
+        Email: {{ data['person-to-contact-email'] }}
+        {% endif %}
       </td>
       <td class="change-answer">
         <a href="/survey/who-should-we-contact">
