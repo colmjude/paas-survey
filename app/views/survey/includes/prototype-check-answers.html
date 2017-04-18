@@ -18,7 +18,7 @@
         Using a prototyping kit
       </td>
       <td>
-        {{ data['prototype-kit-choice'] }}
+        {% if data['prototype-kit-choice'] == "other" %}Other: {{ data['other-proto-kit'] }} {% else %} {{ data['prototype-kit-choice'] }} {% endif %}
       </td>
       <td class="change-answer">
         <a href="/survey/additional-prototype-features">
