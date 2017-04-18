@@ -4,9 +4,9 @@
      in the rendering template only
      as discussed: https://github.com/mozilla/nunjucks/issues/525
 -->
-{% macro textField(name, label, data) %}
+{% macro textField(name, label, data, _class='') %}
   {% set value = data[name] %}
-  <label class="form-label" for="{{ name }}">{{ label }}</label>
+  <label class="form-label {{ _class }}" for="{{ name }}">{{ label }}</label>
   <input class="form-control" id="{{ name }}" name="{{ name }}" type="text" value="{{ data[name] }}">
 {% endmacro %}
 
@@ -19,8 +19,8 @@
 
 {% macro checkboxField(name, label, id, value=label, data) %}
 <div class="multiple-choice">
-  <input id="waste-{{id}}" name="{{ name }}" type="checkbox" value="{{ value }}" {{ checked( name, value) }}>
-  <label for="waste-{{id}}">{{ label }}</label>
+  <input id="checkbox-{{id}}" name="{{ name }}" type="checkbox" value="{{ value }}" {{ checked( name, value) }}>
+  <label for="checkbox-{{id}}">{{ label }}</label>
 </div>
 {% endmacro %}
 <!--
